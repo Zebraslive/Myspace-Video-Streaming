@@ -2,7 +2,6 @@
 require 'mystream.php';
 $myspacelink = isset($_GET['url']) && !empty($_GET['url']) ? $_GET['url'] : "https://myspace.com/cypher.sessions/video/cypher-sessions-chaz/109878898";
 $vlink = myStream($myspacelink); //direct mp4
-
 ?>
 <!DOCTYPE html>
 <html >
@@ -95,8 +94,5 @@ player.on('playing', function(e) {
 });
         });
     </script>
-
-
-
 </body>
 </html>
