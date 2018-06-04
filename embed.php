@@ -2,7 +2,7 @@
 require 'mystream.php';
 $myspacelink = isset($_GET['url']) && !empty($_GET['url']) ? $_GET['url'] : "https://myspace.com/cypher.sessions/video/cypher-sessions-chaz/109878898";
 $vlink = myStream($myspacelink); //direct mp4
-
+$posterimg = grabImg($myspacelink);
 ?>
 <!DOCTYPE html>
 <html >
@@ -50,7 +50,7 @@ body, html {margin:0px !important; border-radius:0px !important; padding:0px !im
 
 </head>
 <body>
-     <video id="uniqueID" class="video-js vjs-fluid vjs-16-9" controls preload="auto" width="640" height="264" poster="" data-setup='{}'>
+     <video id="uniqueID" class="video-js vjs-fluid vjs-16-9" controls preload="auto" width="640" height="264" poster="<?php echo $posterimg; ?>" data-setup='{}'>
 <source src="<?php echo $vlink; ?>" type="video/mp4" />
 
       </video>
