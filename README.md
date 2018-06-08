@@ -1,5 +1,6 @@
 # Myspace-Video-Streaming
 Grab stream link from Myspace.com videos
+<br>
 Demo full hidden source http://vstream.x10.mx/ms/embed.php?url=epolhmH6Wl9bc8daNwrL2j7IdgJvo38g0zbyRs1Bu3r2hHI671tB0a_1BVHyDLq7dfxnPVHDQqCmdKnUbpIUQfh-eW1bkhgQhDfIKGWYdGIIYtakJMS17_KUhhj4OREm
 <br>
 Hidden source is impossible to decode from client side without key.
