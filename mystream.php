@@ -16,16 +16,14 @@ $fsk = "";
 $internalErrors = libxml_use_internal_errors(true);
 $dom = new DOMDocument();
 @$dom->loadHTML($htmlf);
-foreach($dom->getElementsByTagName('script') as $k => $js) {
-if ($k >= 5) {
-       $fsk = $js->nodeValue;
-     break;
+preg_match_all('#\bhttps?://[^,\s()<>]+(?:\([\w\d]+\)|([^,[:punct:]\s]|/))#', $htmlf, $match);
+$vlink = "";
+foreach ($match[0] as $c) {
+   if (strpos($c, 'videos.myspacecdn.com:443') !== false) { //if contains get_file/ in url set vlink.
+      $vlink = $c;  
     }
 }
-$parts = explode('mp4StreamUrl":"', $fsk);
-$partsx = explode('","isPremium"', $parts[1]);
-$myvidx = $partsx[0]; //Stream mp4 url
-return $myvidx;   
+return $vlink;   
 }
 function grabImg($url) {
 $htmlf = curlit($url);
